@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+}
+
+@keyframes flicker {
+  0%, 100% { transform: translateX(-50%) scale(1) rotate(-1deg); opacity: 0.9; }
+  25% { transform: translateX(-50%) scale(1.05) rotate(1deg); opacity: 1; }
+  50% { transform: translateX(-50%) scale(0.95) rotate(-2deg); opacity: 0.8; }
+  75% { transform: translateX(-50%) scale(1.02) rotate(2deg); opacity: 0.95; }
+}
+
+.animate-flicker {
+  animation: flicker 0.15s infinite alternate;
+}
+
+body {
+  background-color: #FAFAFA;
+  color: #1C1917;
+}
